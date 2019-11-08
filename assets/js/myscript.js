@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+    $(window).on({
+        keyup: function (k) {
+            // console.log(k); //check which keycode 
+            
+            if (k.keyCode == "39") {
+                prossimaslide();
+            } else if (k.keyCode == "37") {
+                precedenteslide();
+            }
+            
+        }
+    })
+ 
+
     $(".next").click(prossimaslide);
     $(".prev").click(precedenteslide);
 
