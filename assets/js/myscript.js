@@ -12,7 +12,24 @@ $(document).ready(function() {
             
         }
     })
- 
+    
+    
+    // image move every 2 seconds
+    var move;
+    imgMove();
+    function imgMove() {
+         move = setInterval(prossimaslide, 2000);
+    }
+
+    function stopMove() {
+        clearInterval(move);
+    }
+    
+    // conditions-- when mouse hover on image it stops, if leaves then continue
+    $(".images").mouseenter(stopMove);
+    $(".images").mouseleave(imgMove);
+
+
 
     $(".next").click(prossimaslide);
     $(".prev").click(precedenteslide);

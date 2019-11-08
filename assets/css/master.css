@@ -35,6 +35,10 @@
   transform: translateY(-50%);
   font-size: 40px;
   cursor: pointer;
+  transition: color 0.5s;
+}
+.prev:hover, .next:hover{
+  color: orange;
 }
 .next {
   left: auto;
